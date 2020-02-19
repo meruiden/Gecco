@@ -14,11 +14,12 @@ open class SpotlightView: UIView {
     fileprivate lazy var maskLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
         layer.fillRule = CAShapeLayerFillRule.evenOdd
-        layer.fillColor = UIColor.black.cgColor
+        layer.fillColor = color
         return layer
     }()
     
     var spotlight: SpotlightType?
+    var color: CGColor = UIColor.black.cgColor
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
