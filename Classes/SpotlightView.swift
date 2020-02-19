@@ -19,7 +19,11 @@ open class SpotlightView: UIView {
     }()
     
     var spotlight: SpotlightType?
-    open var color: CGColor = UIColor.black.cgColor
+    open var color: CGColor = UIColor.black.cgColor {
+        didSet {
+            maskLayer.fillColor = color
+        }
+    }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
